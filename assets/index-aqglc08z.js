@@ -1,0 +1,294 @@
+import{d as f,r as a,j as e,H as x,l as y,h as v,I as w,f as j,J as k,T as I,a as N}from"./index-jDHeA68L.js";const T={Page:f.main`
+        padding: 32px 16px 80px;
+        max-width: 1180px;
+        margin: 0 auto;
+
+        @media (width >= 768px) {
+            padding: 40px 24px 100px;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .heroIcon {
+            font-size: 48px;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .heroTitle {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--color-heading);
+        }
+
+        .heroTagline {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+        }
+
+        .sparkIcon {
+            margin-left: 4px;
+            color: var(--color-primary);
+        }
+
+        /* FILTERS */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0 28px;
+        }
+
+        .filterBtn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+            color: var(--color-surface-text);
+            font-size: 0.86rem;
+            cursor: pointer;
+
+            transition: background 0.2s ease, transform 0.2s ease,
+                border-color 0.2s ease, color 0.2s ease;
+
+            .filterIcon {
+                font-size: 16px;
+                color: var(--color-primary);
+            }
+
+            &:hover {
+                background: var(--color-surface-soft);
+                transform: translateY(-2px);
+            }
+        }
+
+        .filterBtn--active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-primary-text);
+
+            .filterIcon {
+                color: var(--color-primary-text);
+            }
+        }
+
+        /* GRID */
+        .gridSection {
+            margin-top: 6px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .tile {
+            border: none;
+            padding: 0;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .imgWrap {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+
+            transition: transform 0.25s ease, box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .imgWrap img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transform: scale(1.03);
+            transition: transform 0.35s ease;
+        }
+
+        .tile:hover .imgWrap {
+            transform: translateY(-6px);
+            border-color: var(--color-primary);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .tile:hover img {
+            transform: scale(1.07);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.1)
+            );
+            opacity: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px 12px;
+
+            transition: opacity 0.25s ease;
+        }
+
+        .tile:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlayInner {
+            color: #fff;
+        }
+
+        .overlayInner h3 {
+            font-size: 0.96rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .overlayInner p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 16px;
+        }
+
+        .lightboxInner {
+            position: relative;
+            max-width: 960px;
+            width: 100%;
+            background: var(--color-surface);
+            border-radius: 18px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+
+        .lightboxImageWrap {
+            width: 100%;
+            max-height: min(560px, 70vh);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .lightboxImageWrap img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .lightboxMeta {
+            padding: 14px 18px 16px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .lightboxMeta h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-heading);
+            margin-bottom: 4px;
+        }
+
+        .lightboxMeta p {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+        }
+
+        .lightboxClose {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            border-radius: 999px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            cursor: pointer;
+
+            transition: background 0.2s ease, transform 0.2s ease;
+
+            svg {
+                font-size: 18px;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+                transform: translateY(-1px);
+            }
+        }
+
+        .lightboxNav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            border-radius: 999px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            cursor: pointer;
+
+            transition: background 0.2s ease, transform 0.2s ease;
+
+            svg {
+                font-size: 20px;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.85);
+                transform: translateY(-50%) scale(1.05);
+            }
+        }
+
+        .lightboxNav--prev {
+            left: 10px;
+        }
+
+        .lightboxNav--next {
+            right: 10px;
+        }
+
+        @media (width < 600px) {
+            .lightboxInner {
+                border-radius: 14px;
+            }
+
+            .lightboxNav {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    `},W="/jwit-website/images/gallery/gallery-1.png",C="/jwit-website/images/gallery/gallery-2.png",E="/jwit-website/images/gallery/gallery-3.png",G="/jwit-website/images/gallery/gallery-4.png",L="/jwit-website/images/gallery/gallery-5.png",S="/jwit-website/images/gallery/gallery-6.png",z="/jwit-website/images/gallery/gallery-7.png",P="/jwit-website/images/gallery/gallery-8.png",R=[{id:"all",label:"All"},{id:"events",label:"Events"},{id:"workshops",label:"Workshops"},{id:"community",label:"Community"}],m=[{id:1,src:W,alt:"Women planning on sticky notes during a JWIT meetup",title:"Planning the next meetup",meta:"Community • Bistupur",category:"events"},{id:2,src:C,alt:"Women carrying boxes at an industrial site",title:"On-site industry visit",meta:"Industry tour • Telco",category:"community"},{id:3,src:E,alt:"Woman working on a heavy machine",title:"Factory tech walkthrough",meta:"Manufacturing • Adityapur",category:"events"},{id:4,src:G,alt:"Women sorting material on a workbench",title:"Process & quality session",meta:"Workshop • Plant floor",category:"workshops"},{id:5,src:L,alt:"Women lifting crates together in a yard",title:"Strength in teams",meta:"Community • Yard visit",category:"community"},{id:6,src:S,alt:"Row of women working on a line",title:"Assembly line tech tour",meta:"Industry • Jamshedpur",category:"events"},{id:7,src:z,alt:"Women with helmets and vests working on machinery",title:"Safety & tooling demo",meta:"Workshop • Safety first",category:"workshops"},{id:8,src:P,alt:"Another group of women on an assembly line",title:"Future of work",meta:"Industry • Evening shift",category:"events"}],M=()=>{const[i,h]=a.useState("all"),[n,p]=a.useState(!1),[b,l]=a.useState(0),s=a.useMemo(()=>i==="all"?m:m.filter(r=>r.category===i),[i]),u=r=>{l(r),p(!0)},c=()=>{p(!1)},d=()=>{l(r=>r===0?s.length-1:r-1)},g=()=>{l(r=>r===s.length-1?0:r+1)};a.useEffect(()=>{if(!n)return;const r=o=>{o.key==="Escape"&&c(),o.key==="ArrowLeft"&&d(),o.key==="ArrowRight"&&g()};return window.addEventListener("keydown",r),()=>window.removeEventListener("keydown",r)},[n,d,g]);const t=s[b];return e.jsxs(T.Page,{children:[e.jsxs("header",{className:"hero",children:[e.jsx(x,{className:"heroIcon"}),e.jsx("h1",{className:"heroTitle",children:"Gallery"}),e.jsxs("p",{className:"heroTagline",children:["A glimpse into JWIT meetups, workshops and industry visits.",e.jsx(y,{className:"sparkIcon"})]})]}),e.jsx("div",{className:"filters",children:R.map(r=>e.jsxs("button",{type:"button",className:"filterBtn"+(i===r.id?" filterBtn--active":""),onClick:()=>h(r.id),children:[r.id==="events"&&e.jsx(v,{className:"filterIcon"}),r.id==="workshops"&&e.jsx(w,{className:"filterIcon"}),r.id==="community"&&e.jsx(j,{className:"filterIcon"}),r.id==="all"&&e.jsx(x,{className:"filterIcon"}),e.jsx("span",{children:r.label})]},r.id))}),e.jsx("section",{className:"gridSection",children:e.jsx("div",{className:"grid",children:s.map((r,o)=>e.jsx("button",{type:"button",className:"tile",onClick:()=>u(o),children:e.jsxs("div",{className:"imgWrap",children:[e.jsx("img",{src:r.src,alt:r.alt}),e.jsx("div",{className:"overlay",children:e.jsxs("div",{className:"overlayInner",children:[e.jsx("h3",{children:r.title}),e.jsx("p",{children:r.meta})]})})]})},r.id))})}),n&&t&&e.jsx("div",{className:"lightbox",role:"dialog","aria-modal":"true",onClick:c,children:e.jsxs("div",{className:"lightboxInner",onClick:r=>r.stopPropagation(),children:[e.jsx("button",{type:"button",className:"lightboxClose",onClick:c,"aria-label":"Close gallery preview",children:e.jsx(k,{})}),e.jsx("div",{className:"lightboxImageWrap",children:e.jsx("img",{src:t.src,alt:t.alt})}),e.jsxs("div",{className:"lightboxMeta",children:[e.jsx("h3",{children:t.title}),e.jsx("p",{children:t.meta})]}),e.jsx("button",{type:"button",className:"lightboxNav lightboxNav--prev",onClick:d,"aria-label":"Previous image",children:e.jsx(I,{})}),e.jsx("button",{type:"button",className:"lightboxNav lightboxNav--next",onClick:g,"aria-label":"Next image",children:e.jsx(N,{})})]})})]})};export{M as default};
