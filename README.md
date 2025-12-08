@@ -6,6 +6,18 @@ This project represents the official platform of **JWIT: Jamshedpur Women in Tec
 
 ---
 
+## 🔗 Live Demo & Repository
+
+### **🌍 Live Website**
+
+https://a2rp.github.io/jwit-website/
+
+### **📦 GitHub Repository**
+
+https://github.com/a2rp/jwit-website
+
+---
+
 ![alt text](image.png)
 
 ![alt text](image-1.png)
