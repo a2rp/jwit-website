@@ -1,0 +1,128 @@
+/* src/theme.css */
+
+/* ===== Default: Soft pink LIGHT theme (light) ===== */
+
+:root,
+html[data-theme="light"] {
+    /* Page backgrounds */
+    --color-bg: #fff6fa;
+    --color-bg-text: #452136;
+
+    --color-bg-alt: #ffe9f4;
+    --color-bg-alt-text: #3a192c;
+
+    /* Cards / surfaces */
+    --color-surface: #ffffff;
+    --color-surface-text: #3f1a30;
+    --color-surface-muted-text: #7c4b65;
+
+    --color-surface-soft: #fdeef7;
+    --color-surface-soft-text: #4b2136;
+
+    /* Brand / accent colors  */
+    --color-primary: #ff4b92; /* hot pink */
+    --color-primary-text: #310414;
+
+    --color-primary-soft: #ffe0ef;
+    --color-primary-soft-text: #5a1430;
+
+    --color-secondary: #b25cff; /* violet */
+    --color-secondary-text: #210733;
+
+    --color-secondary-soft: #f2e5ff;
+    --color-secondary-soft-text: #341547;
+
+    /* Status colors (cyan / amber / coral) */
+    --color-success: #32c6ff;
+    --color-success-text: #001a26;
+
+    --color-warning: #ffd15c;
+    --color-warning-text: #3a2700;
+
+    --color-danger: #ff5c7a;
+    --color-danger-text: #330008;
+
+    /* Borders & outlines */
+    --color-border: #f1c4db;
+    --color-border-strong: #d58ab1;
+
+    /* Typography general */
+    --color-heading: #351024;
+    --color-text: #55253b;
+    --color-text-muted: #8a5570;
+
+    /* Links */
+    --color-link: #ff4b92;
+    --color-link-text: #310414;
+    --color-link-hover: #b25cff;
+    --color-link-hover-text: #1c062b;
+
+    /* Misc UI */
+    --color-chip-bg: #ffe0ef;
+    --color-chip-text: #5b1430;
+
+    --shadow-soft: 0 10px 30px rgba(226, 108, 167, 0.18);
+}
+
+/* ===== DARK theme (TechNaari – high contrast pink/purple) ===== */
+
+html[data-theme="dark"] {
+    /* Page backgrounds */
+    --color-bg: #0b0610;
+    --color-bg-text: #fbd8ea;
+
+    --color-bg-alt: #140a1e;
+    --color-bg-alt-text: #f7cbe4;
+
+    /* Cards / surfaces */
+    --color-surface: #1b1026;
+    --color-surface-text: #fbe3f3;
+    --color-surface-muted-text: #d497bd;
+
+    --color-surface-soft: #241230;
+    --color-surface-soft-text: #ffd9f0;
+
+    /* Brand / accent colors */
+    --color-primary: #ff5ca8;
+    --color-primary-text: #250010;
+
+    --color-primary-soft: #4b1c36;
+    --color-primary-soft-text: #ffd6ed;
+
+    --color-secondary: #c27aff;
+    --color-secondary-text: #120322;
+
+    --color-secondary-soft: #3b214f;
+    --color-secondary-soft-text: #f4e3ff;
+
+    /* Status colors */
+    --color-success: #35cffb;
+    --color-success-text: #001821;
+
+    --color-warning: #ffc857;
+    --color-warning-text: #241700;
+
+    --color-danger: #ff6b88;
+    --color-danger-text: #26000a;
+
+    /* Borders & outlines */
+    --color-border: #362143;
+    --color-border-strong: #5a326d;
+
+    /* Typography general */
+    --color-heading: #ffe6f6;
+    --color-text: #f3cde0;
+    --color-text-muted: #c792b0;
+
+    /* Links */
+    --color-link: #ff7ab8;
+    --color-link-text: #250010;
+    --color-link-hover: #c27aff;
+    --color-link-hover-text: #0f021c;
+
+    /* Misc UI */
+    --color-chip-bg: #3b1b3f;
+    --color-chip-text: #ffd7f0;
+
+    --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.7);
+}

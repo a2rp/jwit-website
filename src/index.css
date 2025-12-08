@@ -1,0 +1,163 @@
+/* src/index.css */
+
+/* ===== Reset ===== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make sure base elements stretch correctly */
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+/* ===== Base layout / body ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    /* Theme-driven colors */
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Root wrapper inherits theme colors */
+#root {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* ===== Typography ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: var(--color-heading);
+    line-height: 1.3;
+}
+
+p,
+span,
+small,
+label,
+li {
+    color: var(--color-text);
+}
+
+small {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+/* Text selection */
+::selection {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-text);
+}
+
+/* ===== Links ===== */
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* ===== Basic elements ===== */
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    margin: 12px 0;
+}
+
+code,
+pre {
+    font-family: "Courier New", Courier, monospace;
+    background-color: var(--color-surface-soft);
+    color: var(--color-surface-soft-text);
+}
+
+/* ===== Form controls ===== */
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 6px 8px;
+
+    background-color: var(--color-surface);
+    color: var(--color-surface-text);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-soft);
+}
+
+/* ===== Buttons ===== */
+
+button,
+input[type="button"],
+input[type="submit"] {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    background-color: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+}
+
+/* Disabled state */
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
