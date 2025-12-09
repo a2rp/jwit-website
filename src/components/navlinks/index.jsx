@@ -8,6 +8,7 @@ import {
     TbPhoto,
     TbMail,
     TbChevronDown,
+    TbCode, // 👈 NEW
 } from "react-icons/tb";
 import { RiHandHeartFill } from "react-icons/ri";
 import { useEffect, useRef, useState } from "react";
@@ -58,6 +59,14 @@ const NAV_ITEMS = [
         to: "/contact",
         label: "Contact",
         icon: TbMail,
+    },
+    // 👇 NEW: About Developer link
+    {
+        id: "about-dev",
+        type: "link",
+        to: "/about-developer",
+        label: "About Developer",
+        icon: TbCode,
     },
 ];
 

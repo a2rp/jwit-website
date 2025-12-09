@@ -11,6 +11,7 @@ const Sponsors = lazy(() => import("./pages/sponsors"));
 const Resources = lazy(() => import("./pages/resources"));
 const Gallery = lazy(() => import("./pages/gallery"));
 const Contact = lazy(() => import("./pages/contact"));
+const AboutDeveloper = lazy(() => import("./pages/aboutDeveloper"));
 const NotFound = lazy(() => import("./pages/placeholder"));
 
 export default function AppRoutes() {
@@ -46,6 +47,7 @@ export default function AppRoutes() {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/about-developer" element={<AboutDeveloper />} />
 
                 {/* ---------- 404 ---------- */}
                 <Route path="*" element={<NotFound />} />
