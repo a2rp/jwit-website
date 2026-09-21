@@ -1,4 +1,4 @@
-import{d as m,r as s,j as e,k as p,l as h,g as t,m as l}from"./index-CZeAmlQo.js";const x={Page:m.main`
+import{d as m,r as s,j as e,k as p,l as h,g as t,m as l}from"./index-BAkg7P-W.js";const x={Page:m.main`
         padding: 32px 16px 80px;
         max-width: 1180px;
         margin: 0 auto;
