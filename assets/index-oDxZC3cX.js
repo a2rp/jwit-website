@@ -1,4 +1,4 @@
-import{d as x,r as n,j as e,n as u,l as g,e as h,y as b,z as f,A as d,x as v,B as k,C as y,f as j,D as S,c as T,E as c,F as N}from"./index-CSWTnb4W.js";import{M as w}from"./index-COtXq0AF.js";const L={Page:x.main`
+import{d as x,r as n,j as e,n as u,l as g,e as h,y as b,z as f,A as d,x as v,B as k,C as y,f as j,D as S,c as T,E as c,F as N}from"./index-B2S8S3KJ.js";import{M as w}from"./index-GSoX3aY7.js";const L={Page:x.main`
         padding: 32px 16px 80px;
         max-width: 1180px;
         margin: 0 auto;
