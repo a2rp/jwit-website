@@ -1,75 +1,36 @@
-import React from "react";
+import { createElement } from "react";
+import { TbBrandCodepen, TbBrandFacebook, TbBrandGithub, TbBrandLinkedin, TbBrandPatreon, TbBrandYoutube, TbCoffee, TbHeart, TbMail, TbWorld } from "react-icons/tb";
 import { Styled } from "./styled";
-import {
-    TbBrandInstagram,
-    TbBrandLinkedin,
-    TbBrandYoutube,
-    TbBrandDiscord,
-    TbMail,
-} from "react-icons/tb";
 
-const Footer = () => {
-    const year = new Date().getFullYear();
+const links = [
+    ["Portfolio", "https://www.ashishranjan.net/", TbWorld],
+    ["GitHub", "https://github.com/a2rp", TbBrandGithub],
+    ["CodePen", "https://codepen.io/ash1198", TbBrandCodepen],
+    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", TbBrandLinkedin],
+    ["Facebook", "https://www.facebook.com/theash.ashish/", TbBrandFacebook],
+    ["YouTube", "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1", TbBrandYoutube],
+    ["Email", "mailto:ash.ranjan09@gmail.com", TbMail],
+    ["Support", "https://a2rp-donation-page.netlify.app/", TbHeart],
+    ["Buy Me a Coffee", "https://buymeacoffee.com/a2rp", TbCoffee],
+    ["Patreon", "https://www.patreon.com/a2rp", TbBrandPatreon],
+];
 
-    return (
-        <Styled.Wrap>
-            <div className="inner">
-                <div className="metaRow">
-                    <span className="copy">
-                        © {year} JWIT. All rights reserved.
-                    </span>
-                    <span className="tagline">
-                        Jamshedpur Women in Technology
-                    </span>
-                </div>
-
-                <nav className="linksRow" aria-label="JWIT social links">
-                    <a
-                        href="#"
-                        className="linkItem"
-                    >
-                        <TbBrandDiscord />
-                        <span>Discord</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="linkItem"
-                    >
-                        <TbBrandInstagram />
-                        <span>Instagram</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="linkItem"
-                    >
-                        <TbBrandLinkedin />
-                        <span>LinkedIn</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="linkItem"
-                    >
-                        <TbBrandYoutube />
-                        <span>YouTube</span>
-                    </a>
-                    <a
-                        href="mailto:hello@jwit.in"
-                        className="linkItem"
-                    >
-                        <TbMail />
-                        <span>Email Us</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="linkItem pill"
-                    >
-                        <span className="pillDot" />
-                        <span>Join Our Mailing List</span>
-                    </a>
-                </nav>
+const Footer = () => (
+    <Styled.Wrap>
+        <div className="inner">
+            <div className="metaRow">
+                <span className="copy">Copyright &copy; {new Date().getFullYear()} <a href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer">Ashish Ranjan</a></span>
+                <span className="tagline">Jamshedpur Women in Technology</span>
             </div>
-        </Styled.Wrap>
-    );
-};
+            <nav className="linksRow" aria-label="Social and support links">
+                {links.map(([label, href, icon]) => (
+                    <a key={label} href={href} className="linkItem" target={href.startsWith("mailto:") ? undefined : "_blank"} rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"} aria-label={label} title={label}>
+                        {createElement(icon, { "aria-hidden": true })}
+                    </a>
+                ))}
+            </nav>
+        </div>
+    </Styled.Wrap>
+);
 
 export default Footer;

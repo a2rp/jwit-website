@@ -48,23 +48,22 @@ export const Styled = {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            font-size: 11px;
+            gap: 8px;
         }
 
         .linkItem {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            padding: 0;
+            border-radius: 9px;
             text-decoration: none;
             color: var(--color-surface-soft-text);
-            border: 1px solid transparent;
+            border: 1px solid var(--color-border);
 
             transition: background-color 0.18s ease, color 0.18s ease,
-                border-color 0.18s ease, transform 0.1s ease,
-                box-shadow 0.18s ease;
+                border-color 0.18s ease, box-shadow 0.18s ease;
 
             svg {
                 font-size: 13px;
@@ -75,25 +74,6 @@ export const Styled = {
                 color: var(--color-primary-text);
                 border-color: var(--color-border);
                 box-shadow: var(--shadow-soft);
-                transform: translateY(-1px);
-            }
-        }
-
-        .linkItem.pill {
-            background-color: var(--color-primary);
-            color: var(--color-primary-text);
-            font-weight: 600;
-
-            .pillDot {
-                width: 6px;
-                height: 6px;
-                border-radius: 999px;
-                background-color: var(--color-primary-soft);
-            }
-
-            &:hover {
-                background-color: var(--color-secondary);
-                color: var(--color-secondary-text);
             }
         }
     `,

@@ -84,14 +84,14 @@ const PAST = [
             "A practical introduction to version control, branching, and GitHub workflows – every attendee pushed their first PR.",
     },
     {
-        title: "AI Awareness Session",
+        title: "Technology Awareness Session",
         date: "Jan 12, 2025",
         location: "Jamshedpur Women's College",
         attendees: "140+ attended",
         img: imgPast3,
         tag: "Seminar",
         description:
-            "Exploring what AI really is, how it is used in industry, and where students can start learning responsibly.",
+            "Exploring practical technology concepts, industry use cases, and responsible ways for students to keep learning.",
     },
 ];
 

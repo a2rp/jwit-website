@@ -3,7 +3,8 @@ import { Styled } from "./styled";
 import { IoIosMenu } from "react-icons/io";
 import { TbSun, TbMoon, TbChevronDown } from "react-icons/tb";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "/images/logo.png";
+
+const logo = `${import.meta.env.BASE_URL}logo.png`;
 
 /* TOP NAV ITEMS (DESKTOP) */
 const NAV_ITEMS = [
@@ -78,7 +79,7 @@ const Header = ({ setDisplayDrawer }) => {
             <Styled.Main>
                 <Styled.Col className="left">
                     <NavLink to="/" className="brandName" onClick={closeDropdowns}>
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="JWIT logo" />
                         {/* JWIT */}
                     </NavLink>
                 </Styled.Col>

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Styled } from "./styled";
 
 import {
@@ -117,21 +117,21 @@ const Gallery = () => {
         setLightboxOpen(true);
     };
 
-    const closeLightbox = () => {
+    const closeLightbox = useCallback(() => {
         setLightboxOpen(false);
-    };
+    }, []);
 
-    const showPrev = () => {
+    const showPrev = useCallback(() => {
         setLightboxIndex((prev) =>
             prev === 0 ? filteredItems.length - 1 : prev - 1
         );
-    };
+    }, [filteredItems.length]);
 
-    const showNext = () => {
+    const showNext = useCallback(() => {
         setLightboxIndex((prev) =>
             prev === filteredItems.length - 1 ? 0 : prev + 1
         );
-    };
+    }, [filteredItems.length]);
 
     // ESC key to close
     useEffect(() => {
@@ -145,7 +145,7 @@ const Gallery = () => {
 
         window.addEventListener("keydown", handleKey);
         return () => window.removeEventListener("keydown", handleKey);
-    }, [lightboxOpen, showPrev, showNext]);
+    }, [closeLightbox, lightboxOpen, showPrev, showNext]);
 
     const currentItem = filteredItems[lightboxIndex];
 

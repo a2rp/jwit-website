@@ -70,8 +70,6 @@ const NAV_ITEMS = [
     },
 ];
 
-const stripHash = (to) => to.split("#")[0];
-
 // custom: decide which sub-item is active using path + hash
 const isSubActive = (sub, location, activePath) => {
     const [subPath, subHash = ""] = sub.to.split("#"); // "/events", "past" etc.
@@ -124,7 +122,7 @@ const NavLinks = ({ onNavigate }) => {
             });
             return next;
         });
-    }, [activePath, location.hash]);
+    }, [activePath, location]);
 
     // scroll active item into view
     useEffect(() => {
@@ -134,7 +132,7 @@ const NavLinks = ({ onNavigate }) => {
                 behavior: "smooth",
             });
         }
-    }, [activePath, location.hash]);
+    }, [activePath, location]);
 
     const handleClose = () => {
         if (typeof onNavigate === "function") onNavigate();
