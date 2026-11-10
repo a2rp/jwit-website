@@ -36,6 +36,15 @@ const NAV_ITEMS = [
 
 const stripHash = (to) => to.split("#")[0];
 
+const readSavedTheme = () => {
+    try {
+        const stored = window.localStorage.getItem("technaari-theme");
+        return stored === "light" || stored === "dark" ? stored : "light";
+    } catch {
+        return "light";
+    }
+};
+
 const Header = ({ setDisplayDrawer }) => {
     const location = useLocation();
     const activePath = location.pathname;
@@ -43,11 +52,7 @@ const Header = ({ setDisplayDrawer }) => {
     // light / dark theme state
     const [theme, setTheme] = useState(() => {
         if (typeof window === "undefined") return "light";
-
-        const stored = window.localStorage.getItem("technaari-theme");
-        if (stored === "light" || stored === "dark") return stored;
-
-        return "light";
+        return readSavedTheme();
     });
 
     // which dropdown is open (desktop)
@@ -59,7 +64,11 @@ const Header = ({ setDisplayDrawer }) => {
 
         const root = document.documentElement;
         root.dataset.theme = theme;
-        window.localStorage.setItem("technaari-theme", theme);
+        try {
+            window.localStorage.setItem("technaari-theme", theme);
+        } catch {
+            // The selected theme still applies for this session when storage is unavailable.
+        }
     }, [theme]);
 
     const toggleTheme = () => {

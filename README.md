@@ -7,7 +7,7 @@ JWIT is a responsive multi-page community website for Jamshedpur Women in Techno
 - Home, core team, membership, events, sponsors, resources, gallery, and contact pages
 - React Router navigation with dropdown menus and active links
 - Light and dark themes with responsive drawer navigation
-- Event details, gallery lightbox, resource sections, and accessible forms
+- Event details, gallery lightbox, resource sections, and email-based contact and membership flows
 - Local image assets, responsive layout, icon-only social and support footer links
 
 ## Tech stack
